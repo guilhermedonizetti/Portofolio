@@ -2,6 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.errorhandler(404)
+def erro(e):
+	return render_template('erro.html')
+
 @app.route('/')
 def inicial():
 	return render_template('index.html')
