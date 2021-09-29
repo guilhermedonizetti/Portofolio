@@ -2004,6 +2004,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		color: #1E90FF;
 	}
 
 		.icon:before {
@@ -2464,8 +2465,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #1E90FF;
+			color: #4169e1 !important;
 		}
 
 		input[type="submit"]:active,
