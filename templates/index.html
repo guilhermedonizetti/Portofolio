@@ -11,8 +11,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
 		<link rel="shortcut icon" href="../static/images/site_icon.png">
-		<script src="https://kit.fontawesome.com/3fb0ee1336.js" crossorigin="anonymous" defer></script>
 	</head>
+
+	<script type="text/javascript">
+			window.$crisp=[];
+			window.CRISP_WEBSITE_ID="b9c20f8e-079b-4535-9448-0b8e5dcf4a20";
+			(function(){
+				d=document;
+				s=d.createElement("script");
+				s.src="https://client.crisp.chat/l.js";
+				s.async=1;
+				d.getElementsByTagName("head")[0].appendChild(s);
+			})
+			();
+	</script>
 																																																							
 	<body class="is-preload" onload="frases();">
 
@@ -29,10 +41,11 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h3>Olá, sou <b>Guilherme Donizetti</b>!<br />
-							Aqui você poderá me conhecer melhor e saber mais do meu trabalho.</h3>
+							<h1>Olá, sou <b>Guilherme Donizetti</b>!</h1>
+							<h3>Aqui você poderá me conhecer melhor e saber mais do meu trabalho.</h3>
 						</header>
 						<p>Sou graduando do último semestre de Análise e Desenvolvimento de Sistemas na Fatec Cruzeiro, e técnico em Informática pela Etec Cruzeiro. Que tal me conhecer um pouco mais?</p>
+
 						<ul class="actions">
 							<li><a href="../templates/pessoal.html" class="button">Ver mais</a></li>
 						</ul>
@@ -115,25 +128,24 @@
 						
 						<center>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/guilhermedonizetti-ads/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/guilhermedonizetti/" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/guilhermedonizetti-ads/" class="icon brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/guilhermedonizetti/" class="icon brands fa-github fa-2x"><span class="label">Github</span></a></li>
 						</ul>
+
 						</center>
 
 						<hr>
 						<br>
 						<center>
-							<blockquote>
-								{{ frase[0] }}
-							</blockquote>
+							<i>"{{ frase[0] }}"</i>
 							{{ frase[1] }}
-						</center>
 
-						<br>
+							<hr width="40">
+						</center>
 						
 						<center>
 						<ul class="copyright">
-							Essa página foi desenvolvida com o apoio de <a href="http://html5up.net">HTML5 UP</a>, que cedeu livremente o belo projeto para ser adaptado por mim, Guilherme!</li>
+							Essa página foi desenvolvida com o apoio de <a href="http://html5up.net" target="_blank">HTML5 UP</a>, que cedeu livremente o belo projeto para ser adaptado por mim, Guilherme!</li>
 						</ul>
 						</center>
 
@@ -141,18 +153,6 @@
 			</div>
 
 		<!-- Scripts -->
-			<script type="text/javascript">
-				window.$crisp=[];
-				window.CRISP_WEBSITE_ID="b9c20f8e-079b-4535-9448-0b8e5dcf4a20";
-				(function(){
-					d=document;
-					s=d.createElement("script");
-					s.src="https://client.crisp.chat/l.js";
-					s.async=1;
-					d.getElementsByTagName("head")[0].appendChild(s);
-				})
-				();
-			</script>
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.poptrox.min.js"></script>
 			<script src="../assets/js/browser.min.js"></script>

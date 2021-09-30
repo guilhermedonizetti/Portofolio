@@ -31,4 +31,4 @@ def frases():
 	return frase
 
 if __name__ == '__main__':
-	app.run(host='192.168.10.102', port=5000)
+	app.run()
