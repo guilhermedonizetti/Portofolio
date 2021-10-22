@@ -25,7 +25,8 @@ def frases():
 	lista = [
 				['O insucesso é apenas uma oportunidade para recomeçar com mais inteligência.', 'Henry Ford'],
 				['Acredite que ainda não sorriu tudo e que seu coração ainda vai amar muito; acredite que o melhor da vida ainda vai chegar.', 'Desconhecido'],
-				['O problema não é o problema, o problema é a sua atitude sobre o problema.','Capitão Jack Sparrow']
+				['O problema não é o problema, o problema é a sua atitude sobre o problema.','Capitão Jack Sparrow'],
+				['Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.', 'Charles Chaplin']
 			]
 	frase = choice(lista)
 	return frase
