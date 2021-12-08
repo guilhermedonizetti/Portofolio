@@ -15,9 +15,12 @@ def inicial():
 @app.route('/templates/<string:pagina>')
 def mostrar_paginas(pagina):
 	extensao = pagina.split('.')
-	extensao = extensao[1]
-	if extensao=='html':
-		return render_template('{}'.format(pagina))
+	if extensao[1] == 'html':
+		if extensao[0] == 'pessoal':
+			foto = escolher_foto()
+			return render_template('{}'.format(pagina), foto=foto)
+		else:
+			return render_template('{}'.format(pagina))
 	else:
 		return render_template('erro.html')
 
@@ -30,6 +33,12 @@ def frases():
 			]
 	frase = choice(lista)
 	return frase
+
+def escolher_foto():
+	lista = ['eu_1', 'eu_1', 'eu_3']
+	foto = choice(lista)
+
+	return foto
 
 if __name__ == '__main__':
 	app.run()
