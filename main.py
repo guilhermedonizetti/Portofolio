@@ -44,7 +44,7 @@ def frases():
 
 #Seleciona rndomicamente uma foto para sre exibida na pagina de Sobre Mim
 def escolher_foto():
-	lista = ['eu_1', 'eu_1', 'eu_3']
+	lista = ['eu_1', 'eu_2', 'eu_2', 'eu_3', 'eu_2', 'eu_2']
 	foto = choice(lista)
 
 	return foto
@@ -67,5 +67,6 @@ def tempo_de_experiencia():
 
 	return tempo
 
+#Inicializa
 if __name__ == '__main__':
 	app.run()
