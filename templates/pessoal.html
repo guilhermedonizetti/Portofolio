@@ -9,6 +9,7 @@
 		<title>Guilherme - Sobre</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
 		<link rel="shortcut icon" href="../static/images/site_icon.png">
 
@@ -57,50 +58,132 @@
 						<h1>Cursos que realizei:</h1>
 						<p>Aqui destaco alguns cursos que realizei.</p>
 						<div class="box alt">
-							<div class="row gtr-50 gtr-uniform">
-								<div class="col-4">
-									<label>ÁREA: Internet das Coisas<br>
-									Conect dispositivos IoT à nuvem AWS - Alura.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/iot.png" alt="" />
-									</span>
+
+								<div class="col-12">
+									<div class="card text-center">
+										<div class="card-header" style="background-color: #ADD8E6;">
+									    	<b>Internet das Coisas &nbsp; <i class="fas fa-wifi"></i></b>
+									  	</div>
+									  	<div class="card-body">
+									    	<h5 class="card-title">Por Alura</h5>
+									    	<p class="card-text">Conect dispositivos IoT à nuvem AWS.</p>
+									    	<input type="button" name="" id="curso1" class="button" value="Saber mais">
+									  	</div>
+									  	<div  id="curso1_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+										    No curso usei um programa em Python que simulava microcontroladores, com ele consegui enviar dados por telemetria para a plataforma AWS IoT Core. Ao receber os dados, fiz o direcionamento deles para o armazenamento DynamoDB e também criei regras de notificação usando AWS SNS para receber alertas por SMS caso algum dado esteja fora do esperado.<br><br>
+										    Também aprendi sobre mecanismo de segurança na comunicação telemétrica com a AWS através de certificados.
+										    <b>Nesse curso utilizei:</b><br>
+										    <ul>
+										    	<li>AWS IoT Core</li>
+										    	<li>Dynamo DB - banco NoSQL da AWS</li>
+										    	<li>AWS SNS (Simple Notofocation Service)</li>
+										    	<li>Python</li>
+										    </ul>
+										    No total de aulas o curso teve duração de 8 horas de duração, mais as horas extras que usei para explorar mais e fazer minhas tentativas individuais.<br>
+										    <center>
+										    	<button id="curso1_fechar" type="button" class="small button">Fechar</button>
+										    </center>
+										</div>
+									</div>
 								</div>
-								<div class="col-4">
-									<label>ÁREA: CN e IA<br>
-									Computação em Nuvem e Inteligência Artificial - FAT e Microsoft.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/nuvem.png" alt="" />
-									</span>
+
+								<br>
+
+								<div class="col-12">
+									<div class="card text-center">
+										<div class="card-header" style="background-color: #ADD8E6;">
+									    	<b>C. Nuvem &nbsp; <i class="fas fa-cloud"></i> / Inteligência Artificial &nbsp; <i class="fas fa-brain"></i></b>
+									  	</div>
+									  	<div class="card-body">
+									    	<h5 class="card-title">Por FAT e Microsoft</h5>
+									    	<p class="card-text">Computação em Nuvem e Inteligência Artificial</p>
+									    	<input type="button" id="curso2" class="button" value="Saber mais">
+									  	</div>
+									  	<div  id="curso2_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+										    O curso apresentou os conceitos e práticas em duas partes: a primeira foi 16 horas de Computação em Nuvem no ambiente Azure, a segunda parte foi 20 horas de Inteligência Artificial também no Azure.<br><br>
+										    Ao final do curso fui capaz de descrever as duas áreas, falar de seus fundamentos, e realizar práticas com os recursos da nuvem da Microsoft. Como resultado do meu desempenho, ganhei voucher de 100% para realizar a certificação de nível iniciante em Inteligência Artificial da Microsoft AI-900).<br><br>
+										    Além do conteúdo técnico, o curso teve 4 horas de <i>soft skills</i> onde vi uma das melhores coisas que já aprendi: a escutatória.<br><br>
+										    <b>Nesse curso utilizei:</b><br>
+										    <ul>
+										    	<li>Azure</li>
+										    </ul>
+										    No total foram 40 horas de cursos com conteúdos preparados pela Microsoft e aplicado pela FAT - Fundação de Apoio à Tecnologia, e tive acesso ao curso gratuitamente pela parceria da Microsoft com a Faculdade de Tecnologia do Estado de São Paulo.<br>
+										    <center>
+										    	<button id="curso2_fechar" type="button" class="small button">Fechar</button>
+										    </center>
+										</div>
+									</div>
 								</div>
-								<div class="col-4">
-									<label>ÁREA: Inteligência Artificial<br>
-									Certificação de Inteligência Artificial Microsoft AI-900 - Microsoft.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/ia.jpg" alt="" />
-									</span>
+
+								<br>
+								
+								<div class="col-12">
+									<div class="card text-center">
+										<div class="card-header" style="background-color: #ADD8E6;">
+									    	<b>Inteligência Artificial &nbsp; <i class="fas fa-brain"></i></b>
+									  	</div>
+									  	<div class="card-body" >
+									    	<h5 class="card-title">Por Microsoft</h5>
+									    	<p class="card-text">Certificação de Inteligência Artificial Microsoft AI-900</p>
+									    	<input type="button" id="curso3" class="button" value="Saber mais">
+									  	</div>
+									  	<div  id="curso3_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+										    A certificação de Inteligência Artificial da Microsoft (AI-900) é um exame que avalia o conhecimento teórico na área e cobre tópicos iniciantes como processamento de linguagem natural, visão computacional e aprendizagem de máquina. Embora não tenha avaliação prática, a prova possui questões que só podem ser respondidas por quem realmente teve contato com as ferramentas do Azure.<br><br>
+										    O exame teve duração de 1 hora, com 50 questões, todas em Inglês. A realização dela foi monitorada por um instrutor que assistia o compartilhamento da minha tela enquanto eu respondia.<br><br>
+										    Ao final fui aprovado e recebi a certificação!
+										    <center>
+										    	<button id="curso3_fechar" type="button" class="small button">Fechar</button>
+										    </center>
+										</div>
+									</div>
 								</div>
-								<div class="col-4">
-									<label>ÁREA: Segurança da Informação<br>
-									Introdução à Cibersegurança - FAT e Cisco.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/seguranca.jpg" alt="" />
-									</span>
+
+								<br>
+
+								<div class="col-12">
+									<div class="card text-center">
+										<div class="card-header" style="background-color: #ADD8E6;">
+									    	<b>Segurança da Informação &nbsp; <i class="fas fa-user-secret"></i></b>
+									  	</div>
+									  	<div class="card-body">
+									    	<h5 class="card-title">Por FAT e CISCO</h5>
+									    	<p class="card-text">Introdução à Cibersegurança</p>
+									    	<input type="button" name="" class="button" value="Saber mais">
+									  	</div>
+									</div>
 								</div>
-								<div class="col-4">
-									<br><label>ÁREA: Segurança da Informação<br>
-									CyberOps Associate - FAT e Cisco.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/seguranca.jpg" alt="" />
-									</span>
+							
+								<br>
+								
+								<div class="col-12">
+									<div class="card text-center">
+										<div class="card-header" style="background-color: #ADD8E6;">
+									    	<b>Segurança da Informação &nbsp; <i class="fas fa-user-secret"></i></b>
+									  	</div>
+									  	<div class="card-body">
+									    	<h5 class="card-title">Por FAT e CISCO</h5>
+									    	<p class="card-text">CyberOps Associate</p>
+									    	<input type="button" name="" class="button" value="Saber mais">
+									  	</div>
+									</div>
 								</div>
-								<div class="col-4">
-									<label>ÁREA: Engenharia de Software<br>
-									Scrum Foundation Professional Certificate - CertProf.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/scrum.png" alt="" />
-									</span>
+
+								<br>
+								
+								<div class="col-12">
+									<div class="card text-center">
+										<div class="card-header" style="background-color: #ADD8E6;">
+									    	<b>Engenharia de Software &nbsp; <i class="fas fa-file-code"></i></b>
+									  	</div>
+									  	<div class="card-body">
+									    	<h5 class="card-title">Por CertProf</h5>
+									    	<p class="card-text">Scrum Foundation Professional Certificate</p>
+									    	<input type="button" name="" class="button" value="Saber mais">
+									  	</div>
+									</div>
 								</div>
-							</div>
+
+							<br>
 						</div>
 
 
@@ -151,12 +234,14 @@
 
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="{{ url_for('static', filename='assets/js/cursos.js') }}"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script> -->
 
 	</body>
 </html>
