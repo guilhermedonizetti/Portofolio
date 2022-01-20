@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Guilherme - Previsão do Tempo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="shortcut icon" href="../static/images/site_icon.png">
+
+		<script type="text/javascript">
+			window.$crisp=[];
+			window.CRISP_WEBSITE_ID="b9c20f8e-079b-4535-9448-0b8e5dcf4a20";
+			(function(){
+				d=document;
+				s=d.createElement("script");
+				s.src="https://client.crisp.chat/l.js";
+				s.async=1;
+				d.getElementsByTagName("head")[0].appendChild(s);
+			})
+			();
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h3>Previsão do Tempo &nbsp; <i class="fas fa-cloud-sun-rain"></i></h3>
+						</header>
+						<p>O programa realiza consulta de dados meteorológicos (previsão do tempo) para uma determinada cidade e exibe em um gráfico de linhas as temperaturas mínimas e máximas para os próximos 10 dias. Os dados utilizados são consumidos de uma API (HG Brasil).<br>
+						Além de visualizar os dados, o usuário pode baixar uma imagem do gráfico em PNG como forma de exportar o conteúdo.<br><br>
+						Ele funciona da seguinte forma: o usuário seleciona uma cidade e realiza a busca, o programa faz uma requisição Ajax a uma função do Python que consome a API e retorna a previsão, com o Python organizo os dados para serem exibidos (dados de datas, cidade/estado, temperaturas mínimas e máximas). Com o retorno da requisição o programa gera o gráfico de linhas e passa a exibir o botão de baixar imagem (do gráfico).<br>
+						Através desse trabalho alguns desafios foram resolvidos, são eles:<br>
+						<li><b>Atualização do gráfico:</b></li> os gráficos feitos com ChartJS são gerados dentro de um elemento canvas HTML, esse elemento só pode ser criado com o mesmo ID uma vez na página; teoricamente, não é possível criar outro canvas ou atualizar. A medida adotada foi criar e destruir  o elemento canvas dinamicamente com JavaScript. Dessa forma, toda vez que consultar sobre uma cidade diferente, o programa destrói o gráfico atual e recria dando a sensação de estar atualizando e sem fazer <i>refresh</i> na página.<br>
+						<li><b>Escala única e igual:</b></li> geralmente, gráficos com duas linhas de valores diferentes adotam escalas diferentes (uma para cada linha), e costumam ser posicionadas uma escala à esquerda e outra à direita, conforme mostra a documentação da biblioteca ChartJS. Como meu objetivo era que ambas fossem exibidas em uma mesma escala, adotei a medida de incluir a menor e a maior temperatura nos vetores de mínima e máxima, e no menor valor tirei 5 e no maior adicionei 10 para que houvesse um espaço no gráfico que facilitasse a visualização. Esses valores adicionados a mais influenciam na escala, mas não são exibidos. Os dois vetores de temperatura passam a ter o mesmo limite mínimo e máximo e assim usam a mesma escala.
+						<li><b>Exportar gráfico:</b></li> por padrão, os gráficos feitos com ChartJS não possuem opção nativa de serem exportados. Porém, como eu queria fazer a exportação da imagem gerada, adotei a medida de pegar o objeto do gráfico e converter para imagem através do base64 do JavaScript. O hash do resultado é usado como link do download no botão de baixar imagem.
+						<li><b>Não atualizar a página:</b></li> como expliquei acima, para não atualizar a página recriando um elemento canvas, fiz a criação e destruição dinâmica pelo JavaScript. Porém, na requisição ao selecionar uma nova cidade, pelo comportamento comum de um formulário a página se atualiza. Para isso usei o Ajax passando o código IBGE da cidade e fiz requisições em uma rota do Flask que chamava a função que realiza a requisição na API.<br><br>
+						
+						<b>Tecnologias usadas: </b>Python, Flask, JavaScript, ChartJS, HTML, HG Brasil (API).</p>
+
+						<center>
+							<a href="https://github.com/guilhermedonizetti/Consulta_Tempo" target="_blank">
+								<button class="primary button">Ver código</button>
+							</a>
+						</center><br><br>
+
+					</section>
+
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="../static/images/previsao_tempo/img1.png" alt="" /></span></div>
+									<div class="col-12"><span class="image fit"><img src="../static/images/previsao_tempo/img3.gif" alt="" /></span></div>
+								</div>
+							</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
