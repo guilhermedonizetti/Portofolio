@@ -12,8 +12,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animacao.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/carrossel.css') }}">
 		<link rel="shortcut icon" href="../static/images/site_icon.png">
 	</head>
 
@@ -67,7 +65,7 @@
 							<div class="col-12">
 								Contribuições recentes no GitHub
 								<span class="image fit">
-									<img src="https://activity-graph.herokuapp.com/graph?username=guilhermedonizetti&theme=react-dark&custom_title=Minhas contribuições no GitHub" alt="Conselho">
+									<img src="https://activity-graph.herokuapp.com/graph?username=guilhermedonizetti&theme=react-dark&custom_title=Minhas contribuições no GitHub">
 								</span>
 							</div>
 						</div>
@@ -162,7 +160,7 @@
 								<div class="col-12">
 									Todas as minhas contribuições no GitHub
 									<span class="image fit">
-										<img src="https://github-readme-streak-stats.herokuapp.com?user=guilhermedonizetti&theme=blux&date_format=j%20M%5B%20Y%5D&background=000000" />
+										<img src="https://github-readme-streak-stats.herokuapp.com?user=guilhermedonizetti&theme=blux&date_format=j%20M%5B%20Y%5D&background=000000"/>
 									</span>
 								</div>
 							</div>
@@ -206,6 +204,7 @@
 						<hr>
 						<br>
 						<center>
+							Uma frase que faz sentido para mim?<br>
 							<i style="color: #696969;">"{{ frase[0] }}"</i>
 							{{ frase[1] }}
 
@@ -220,14 +219,6 @@
 
 
 			</div>
-
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.poptrox.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
