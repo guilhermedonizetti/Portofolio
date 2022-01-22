@@ -36,7 +36,7 @@ def frases():
 	lista = [
 				['Deve-se pedir em oração que a mente seja sã num corpo são. Peça uma alma corajosa!', 'Juvenal - poeta romano'],
 				['Compreender as coisas que me rodeiam é a melhor preparação para compreender o que há além.', 'Hipátia - filósofa grega'],
-				['Acredite que ainda não sorriu tudo e que seu coração ainda vai amar muito; acredite que o melhor da vida ainda vai chegar.', 'Desconhecido'],
+				#['Acredite que ainda não sorriu tudo e que seu coração ainda vai amar muito; acredite que o melhor da vida ainda vai chegar.', 'Desconhecido'],
 				#['O problema não é o problema, o problema é a sua atitude sobre a situação.','Capitão Jack Sparrow'],
 				['Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.', 'Charles Chaplin']
 			]
