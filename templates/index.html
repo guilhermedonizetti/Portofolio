@@ -11,11 +11,11 @@
 		<title>Guilherme Donizetti</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
-		<link rel="shortcut icon" href="../static/images/site_icon.png">
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" defer="defer">
+		<link rel="shortcut icon" href="../static/images/site_icon.png" defer="defer">
 	</head>
 
-	<script type="text/javascript">
+	<script type="text/javascript" defer="defer">
 			window.$crisp=[];
 			window.CRISP_WEBSITE_ID="b9c20f8e-079b-4535-9448-0b8e5dcf4a20";
 			(function(){
@@ -110,8 +110,14 @@
 						<h2>Outros</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://github.com/guilhermedonizetti/Classificador_Obesidade/raw/master/images/imagem1.png" class="image fit thumb"><img src="https://github.com/guilhermedonizetti/Classificador_Obesidade/raw/master/images/imagem1.png" height="100%" alt="" /></a>
+								<h3>Classificador de Obesidade</h3>
+								<p>Através de uma árvore de decisão, o programa analisa 17 parâmetros relacionados à características do usuário e sobre sua rotina rotina, enquanto o usuário responde ele classifica em uma categoria de peso.</p>
+								<a href="../templates/classificador_obesidade.html" class="icon">Saber mais</a>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
 								<a href="../static/images/prev_tempo.png" class="image fit thumb"><img src="../static/images/previsao_tempo/img3.gif" alt="" /></a>
-								<h3>Previsão do Tempo.</h3>
+								<h3>Previsão do Tempo</h3>
 								<p>Programa para consulta e visualização de dados meteorológicos / previsão do tempo. Exibe as linhas de temperatura mínima e máxima de 10 dias em uma cidade.</p>
 								<a href="../templates/previsao_tempo.html" class="icon">Saber mais</a>
 							</article>

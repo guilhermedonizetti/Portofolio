@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Guilherme - Obesidade</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="shortcut icon" href="../static/images/site_icon.png">
+
+		<script type="text/javascript">
+			window.$crisp=[];
+			window.CRISP_WEBSITE_ID="b9c20f8e-079b-4535-9448-0b8e5dcf4a20";
+			(function(){
+				d=document;
+				s=d.createElement("script");
+				s.src="https://client.crisp.chat/l.js";
+				s.async=1;
+				d.getElementsByTagName("head")[0].appendChild(s);
+			})
+			();
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h3>
+								<b><a href="/">Página Inicial</a> <i class="fas fa-angle-right"></i> </b>
+								Classificador de Obesidade
+							</h3>
+						</header>
+						<p>O programa é uma interface para uma árvore de decisão que classifica uma pessoa em uma categoria, que são estas: peso insuficiente, peso normal, sobrepeso tipo I, sobrepeso tipo II, obesidade tipo I, obesidade tipo II e obesidade tipo III.<br>
+						<br>Para gerar a classificação correta, o usuário deve responder verdadeiramente ao formulário. No total são 16 campos que devem ser respondidos, relacionados à características físicas da pessoa (altura, idade, peso, sexo) e relacionadas ao estilo de vida (fumante ou não, meio de transporte que usa no dia a dia, entre outros).<br>
+						<br>As respostas são transformadas em valores numéricos e passam pelas condições da árvore de decisão até que termine dentro de uma categoria do peso.<br>
+						<br>A árvore foi construída usando o algoritmo J48 no software Weka, com um volume de 2.111 registros de dados em que 80% deles (1.689) foram usados para treino e os 20% restantes (422) foram usados para teste. Como resultado, o classificador obteve precisão de 93,4%.<br>
+						<br>O <i>dataset</i> usado pode ser encontrado no repositório de arquivos .arff do <a href="https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+" target="_blank"><i>UCI Machine Learning Repository</i></a>. A pesquisa que desenvolveu esse <i>dataset</i> pode ser encontrada na plataforma <a href="https://www.sciencedirect.com/science/article/pii/S2352340919306985?via%3Dihub" target="_blank"><i>ScienceDirect</i></a>.<br>
+						<br><b>Tecnologias usadas: </b>Python, Streamlit, Weka, J48.</p>
+						<br>
+						<a href="https://share.streamlit.io/guilhermedonizetti/classificador_obesidade/main.py" target="_blank">
+							<button class="primary button">Acesse ao programa!</button>
+						</a>
+						&nbsp;&nbsp;
+						<a href="https://github.com/guilhermedonizetti/Classificador_Obesidade" target="_blank">código</a>
+
+						<br><br>
+
+					</section>
+
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="https://github.com/guilhermedonizetti/Classificador_Obesidade/blob/master/images/imagem1.png?raw=true" alt="" /></span></div>
+								</div>
+							</div>
+
+			</div>
+
+	</body>
+</html>
