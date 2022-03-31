@@ -3,11 +3,12 @@ from random import choice
 from datetime import datetime
 from pytz import timezone
 from math import floor
+from werkzeug.exceptions import HTTPException
 
 app = Flask(__name__)
 
 #Retorna a pagina de erro
-@app.errorhandler(404)
+@app.errorhandler(Exception)
 def erro(e):
 	return render_template('erro.html')
 
