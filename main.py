@@ -22,6 +22,7 @@ def inicial():
 #Grencia as rotas das paginas
 @app.route('/templates/<string:pagina>')
 def mostrar_paginas(pagina):
+	escolher_banner()
 	extensao = pagina.split('.')
 	if extensao[1] == 'html':
 		if extensao[0] == 'pessoal':
