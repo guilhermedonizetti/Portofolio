@@ -15,8 +15,9 @@ def erro(e):
 #Retorna a pagina inicial
 @app.route('/')
 def inicial():
+	escolher_banner()
 	frase = frases()
-	return render_template('index.html', frase=frase)
+	return render_template('index.html', frase=frase, nome_banner=nome_banner)
 
 #Grencia as rotas das paginas
 @app.route('/templates/<string:pagina>')
@@ -26,9 +27,9 @@ def mostrar_paginas(pagina):
 		if extensao[0] == 'pessoal':
 			foto = escolher_foto()
 			tempo = tempo_de_experiencia()
-			return render_template('{}'.format(pagina), foto=foto, tempo=tempo)
+			return render_template('{}'.format(pagina), foto=foto, tempo=tempo, nome_banner=nome_banner)
 		else:
-			return render_template('{}'.format(pagina))
+			return render_template('{}'.format(pagina), nome_banner=nome_banner)
 	else:
 		return render_template('erro.html')
 
@@ -49,6 +50,22 @@ def escolher_foto():
 	foto = choice(lista)
 
 	return foto
+
+#Seleciona randomicamente uma imagem para o banner das paginas, 1 pra cada dia da semana
+def escolher_banner():
+	dia_semana = datetime.today().weekday()
+	global nome_banner
+
+	if dia_semana == 0:
+		nome_banner = "banner"
+	elif dia_semana == 1:
+		nome_banner = "banner1"
+	elif dia_semana == 2:
+		nome_banner = "banner2"
+	elif dia_semana == 3 or dia_semana == 4:
+		nome_banner = "banner3"
+	else:
+		nome_banner = "banner4"
 
 #Calcula a diferenca de datas para dizer automaticamente o tempo de experiencia
 def tempo_de_experiencia():
