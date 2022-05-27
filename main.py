@@ -38,7 +38,6 @@ def mostrar_paginas(pagina):
 def frases():
 	lista = [
 				['Deve-se pedir em oração que a mente seja sã num corpo são. Peça uma alma corajosa!', 'Juvenal - poeta romano'],
-				['Compreender as coisas que me rodeiam é a melhor preparação para compreender o que há além.', 'Hipátia - filósofa grega'],
 				['Na tentativa de construir tais máquinas, nós não devemos estar copiando irreverentemente o poder de Deus em criar almas, [...] antes somos, em qualquer caso, instrumentos da Sua vontade providenciando mansões para as almas que Ele cria.', 'Turing'],
 				['Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.', 'Charles Chaplin']
 			]
@@ -47,7 +46,7 @@ def frases():
 
 #Seleciona rndomicamente uma foto para sre exibida na pagina de Sobre Mim
 def escolher_foto():
-	lista = ['eu_1', 'eu_1', 'eu_1', 'eu_2']
+	lista = ['eu9', 'eu9', 'eu10', 'eu9']
 	foto = choice(lista)
 
 	return foto
