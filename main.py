@@ -70,7 +70,7 @@ def escolher_banner():
 
 #Calcula a diferenca de datas para dizer automaticamente o tempo de experiencia
 def tempo_de_experiencia():
-	inicio_trabalho = datetime(2021, 12, 1)
+	inicio_trabalho = datetime(2022, 6, 1)
 	fuso = timezone('America/Sao_Paulo')
 	data_atualmente = str(datetime.now().astimezone(fuso)).split(" ")
 	data_atualmente = data_atualmente[0].split("-")
