@@ -71,276 +71,305 @@
 
 						<br><br>
 
-						<h1>Tecnologias</h1>
-						<p>Autoavaliação em algumas tecnologias de 0 a 100%:</p>
-						<div class="box alt">
-							<div class="progress">
-								<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-							</div>
-							<h5><span style="color: #21A02C; font-weight:bold;">PHP:</span> Utilizo o PHP (no trabalho e em projetos pessoais) para conexão com banco de dados, validação e tratamento de dados, programação de <i>cron jobs</i>, de webhook, teste de software.</h5>
-							<br>
-							<div class="progress">
-								<div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
-							</div>
-							<h5><span style="color: #5EB0D3; font-weight:bold;">Python:</span> Aplicado em desenvolvimento Web, programas de desktop, transmissão de dados remotos por telemetria, teste de software. Conhecimento em desenvolvimnto e publicação de bilbiotecas e deploy de aplicações.</h5>
-							<br>
-							<div class="progress">
-								<div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-							</div>
-							<h5><span style="color: #ED4836; font-weight:bold;">SQL:</span> Conhecimento em funções de agregação, DML - <i>(Data Manipulation Language)</i>, Cardinalidade/Relacionamentos, normalização de dados, modelagem relacional e conceitual.</h5>
-							<br>
-							<div class="progress">
-								<div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-							</div>
-							<h5><span style="color: #D5CB18; font-weight:bold;">JavaScript:</span> Jquery para manipulação de elementos HTML e eventos, Ajax, manipulação de JSon, validação e tratamento de dados, visualização de dados (ChartJS).</h5>
-							<br>
-							<div class="progress">
-								<div class="progress-bar bg-secondary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-							</div>
-							<h5><span style="color: #625E5D; font-weight:bold;">REST API:</span> Construção de APIs nativamente (sem framework), e também, Flask-RESTful para APIs em Python, Symfony para APIs em PHP, Postman, conhecimento do padrão REST.</h5>
-							<br>
-							<div class="progress">
-								<div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-								<div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-								<div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-								<div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-								<div class="progress-bar bg-secondary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<h5><span style="color: #625E5D; font-weight:bold;">PROGRAMAÇÃO:</span> Na combinação dessas tecnologias (e outras ferramentas e técnicas) me faço um <span style="font-weight: bold;">bom programador</span>, com capacidade de compreender e corrigir códigos de terceiros, resolver conflitos em produção (sem tempo), planejar / propor / aplicar solução de problemas, comunicar com profisionais de outros setores, trabalhar em equipe, auxiliar colegas em suas dificuldades, ensinar o que sei, atuar em projetos, entre outras. Porém, sempre aberto ao aprendizado de novas formas para evoluir como pessoa e profissional!</b></h5>
-						</div>
-
-						<br>
-						<h1>Cursos que realizei:</h1>
-						<p>Aqui destaco alguns cursos que realizei.</p>
-						<div class="box alt">
-
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>Internet das Coisas &nbsp; <i class="fas fa-wifi"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso1">
-									    	<h5 class="card-title">Por Alura</h5>
-									    	<p class="card-text">Conect dispositivos IoT à nuvem AWS.</p>
-									    	<input type="button" name="" id="curso1" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso1_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    No curso desenvolvi um programa em Python que simulava microcontroladores, com ele consegui enviar dados por telemetria para a plataforma AWS IoT Core. Ao receber os dados, fiz o direcionamento deles para o armazenamento DynamoDB e também criei regras de notificação usando AWS SNS para receber alertas por SMS caso algum dado esteja fora do esperado.<br><br>
-										    Também aprendi sobre mecanismo de segurança na comunicação telemétrica com a AWS através de certificados.
-										    <b>Nesse curso utilizei:</b><br>
-										    <ul>
-										    	<li>AWS IoT Core</li>
-										    	<li>Dynamo DB - banco NoSQL da AWS</li>
-										    	<li>AWS SNS (Simple Notofocation Service)</li>
-										    	<li>Python</li>
-										    </ul>
-										    No total de aulas o curso teve duração de 8 horas, mais as horas extras que usei para explorar mais e fazer minhas tentativas individuais.<br>
-										    <center>
-										    	<button id="curso1_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
+						<h1 id="tituloTecnologia">
+							<i id="iconTecnologiaDown" class="fa fa-caret-down" aria-hidden="true" style="display: none;"></i>
+							<i id="iconTecnologiaRight" class="fa fa-caret-right" aria-hidden="true"></i>
+							<input id="controlTecnologia" value="fechado" type="hidden">
+							&nbsp; Tecnologias
+						</h1>
+						<div id="areaTecnologias" style="display: none;">
+							<p>Autoavaliação em algumas tecnologias de 0 a 100%:</p>
+							<div class="box alt">
+								<div class="progress">
+									<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
 								</div>
-
+								<h5><span style="color: #21A02C; font-weight:bold;">PHP:</span> Utilizo o PHP (no trabalho e em projetos pessoais) para conexão com banco de dados, validação e tratamento de dados, programação de <i>cron jobs</i>, de webhook, teste de software.</h5>
 								<br>
-
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>C. Nuvem &nbsp; <i class="fas fa-cloud"></i> / Inteligência Artificial &nbsp; <i class="fas fa-brain"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso2">
-									    	<h5 class="card-title">Por FAT e Microsoft</h5>
-									    	<p class="card-text">Computação em Nuvem e Inteligência Artificial</p>
-									    	<input type="button" id="curso2" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso2_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    O curso apresentou os conceitos e práticas em duas partes: a primeira foi 16 horas de Computação em Nuvem no ambiente Azure, a segunda parte foi 20 horas de Inteligência Artificial também no Azure.<br><br>
-										    Ao final do curso fui capaz de descrever as duas áreas, falar de seus fundamentos, e realizar práticas com os recursos da nuvem da Microsoft. Como resultado do meu desempenho, ganhei voucher de 100% para realizar a certificação de nível iniciante em Inteligência Artificial da Microsoft (AI-900).<br><br>
-										    Além do conteúdo técnico, o curso teve 4 horas de <i>soft skills</i> onde vi uma das melhores coisas que já aprendi: a escutatória.<br><br>
-										    <b>Nesse curso utilizei:</b><br>
-										    <ul>
-										    	<li>Azure</li>
-										    </ul>
-										    No total foram 40 horas de cursos com conteúdos preparados pela Microsoft e aplicado pela FAT - Fundação de Apoio à Tecnologia, e tive acesso ao curso gratuitamente pela parceria da Microsoft com a Faculdade de Tecnologia do Estado de São Paulo.<br>
-										    <center>
-										    	<button id="curso2_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
+								<div class="progress">
+									<div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
 								</div>
-
+								<h5><span style="color: #5EB0D3; font-weight:bold;">Python:</span> Aplicado em desenvolvimento Web, programas de desktop, transmissão de dados remotos por telemetria, teste de software. Conhecimento em desenvolvimento e publicação de bibliotecas e deploy de aplicações.</h5>
 								<br>
-								
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>Inteligência Artificial &nbsp; <i class="fas fa-brain"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso3">
-									    	<h5 class="card-title">Por Microsoft</h5>
-									    	<p class="card-text">Certificação de Inteligência Artificial Microsoft AI-900</p>
-									    	<input type="button" id="curso3" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso3_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    A certificação de Inteligência Artificial da Microsoft (AI-900) é um exame que avalia o conhecimento teórico na área e cobre tópicos iniciantes como processamento de linguagem natural, visão computacional e aprendizagem de máquina. Embora não tenha avaliação prática, a prova possui questões que só podem ser respondidas por quem realmente teve contato com as ferramentas do Azure.<br><br>
-										    O exame teve duração de 1 hora, com 50 questões, todas em Inglês. A realização dela foi monitorada por um instrutor que assistia o compartilhamento da minha tela enquanto eu respondia.<br><br>
-										    Ao final fui aprovado e recebi a certificação!
-										    <center>
-										    	<button id="curso3_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
+								<div class="progress">
+									<div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
 								</div>
-
+								<h5><span style="color: #ED4836; font-weight:bold;">SQL:</span> Conhecimento em funções de agregação, DML - <i>(Data Manipulation Language)</i>, Cardinalidade/Relacionamentos, normalização de dados, modelagem relacional e conceitual.</h5>
 								<br>
-
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>Segurança da Informação &nbsp; <i class="fas fa-user-secret"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso4">
-									    	<h5 class="card-title">Por FAT e CISCO</h5>
-									    	<p class="card-text">Introdução à Cibersegurança</p>
-									    	<input type="button" id="curso4" name="" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso4_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    Foi abordado os principais tipos de ataques cibernéticos, os diferentes tipos de malware e como cada um deles age, as ferramentas usadas na área de segurança para detectar e responder à incidentes, tudo de forma introdutória.<br><br>
-										    O curso foi totalmente teórico e deu noções mais robustas sobre o que é Cibersegurança e mudança de hábitos digitais visando a proteção dos dados.<br>
-										    <center>
-										    	<button id="curso4_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
+								<div class="progress">
+									<div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
 								</div>
-							
+								<h5><span style="color: #D5CB18; font-weight:bold;">JavaScript:</span> Jquery para manipulação de elementos HTML e eventos, Ajax, manipulação de JSon, validação e tratamento de dados, visualização de dados (ChartJS).</h5>
 								<br>
-								
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>Segurança da Informação &nbsp; <i class="fas fa-user-secret"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso5">
-									    	<h5 class="card-title">Por FAT e CISCO</h5>
-									    	<p class="card-text">CyberOps Associate</p>
-									    	<input type="button" id="curso5" name="" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso5_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    Apesar do conteúdo teórico, o curso deu ênfase na prática dos laboratórios: ambientes virtuais para análises de segurança, ferramenta de monitoramento de rede, investigação de vulnerabilidades de endpoints, modelos de resposta à incidentes, classificar os tipos de ataques, análise dos protocolos de rede, criptografia e backup, entre outros.<br><br>
-										    <b>Nesse curso utilizei:</b><br>
-										    <ul>
-										    	<li>Security Onion (SO)</li>
-										    	<li>Kibana</li>
-										    	<li>Sguil</li>
-										    	<li>NetworkMiner</li>
-										    	<li>Etc</li>
-										    </ul>
-										    O curso foi ministrado através de aulas semanais, os laboratórios práticos também eram entregues a cada semana. Ao todo foram 88 horas: 80 horas de conteúdo técnico e 8 horas de <i>soft skills</i>.<br><br>
-										    Todo o conteúdo foi desenvolvido pela CISCO e aplicado pela FAT - Fundação de Apoio à Tecnologia em parceria com a Faculdade de Tecnologia do Estado de São Paulo.<br>
-										    <center>
-										    	<button id="curso5_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
+								<div class="progress">
+									<div class="progress-bar bg-secondary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
 								</div>
-
+								<h5><span style="color: #625E5D; font-weight:bold;">REST API:</span> Construção de APIs nativamente (sem framework), e também, Flask-RESTful para APIs em Python, Symfony para APIs em PHP, Postman, conhecimento do padrão REST.</h5>
 								<br>
-								
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>Engenharia de Software &nbsp; <i class="fas fa-file-code"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso6">
-									    	<h5 class="card-title">Por CertProf</h5>
-									    	<p class="card-text">Scrum Foundation Professional Certificate</p>
-									    	<input type="button" id="curso6" name="" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso6_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    Nesse curso aprendi com mais detalhes sobre o Scrum: o que é, recursos, como aplicar. Para cada tópico foi apresentado explicações e exemplos de uso.<br><br>
-										    Os tópicos abordados foram: o papel das pessoas dentro do Scrum; definição, planejamento e revisão da sprint; backlog da sprint e do produto; incrementos; reunião dirária.<br>
-										    <center>
-										    	<button id="curso6_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
+								<div class="progress">
+									<div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar bg-secondary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
-
-								<br>
-								
-								<div class="col-12">
-									<div class="card text-center">
-										<div class="card-header" style="background-color: #ADD8E6;">
-									    	<b>API &nbsp; <i class="fas fa-code"></i></b>
-									  	</div>
-									  	<div class="card-body" id="card_curso7">
-									    	<h5 class="card-title">Por Digital Innovation One</h5>
-									    	<p class="card-text">Desenvolvimento Avançado de API com Flask</p>
-									    	<input type="button" id="curso7" name="" class="button" value="Saber mais">
-									  	</div>
-									  	<div  id="curso7_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
-										    A simplicidade do Flask permitiu compreender os conceitos REST e as questões mais avançadas sobre API de uma forma bem clara. O curso abordou desenvolvimento eficiente de APIs usando Flask-RESTful e Postman, com persistência em banco de dados e autenticação.<br><br>
-										    O conteúdo foi bem enxuto e focado na explicação do desenvolvimento das APIs e explicação de principais erros.<br>
-										    <center>
-										    	<button id="curso7_fechar" type="button" class="small button">Fechar</button>
-										    </center>
-										</div>
-									</div>
-								</div>
-
-							<br>
-						</div>
-
-
-						<br>
-
-						<h1>Formação acadêmica:</h1>
-						<div class="box alt">
-							<div class="row gtr-50 gtr-uniform">
-								<div class="col-4">
-									<label>INSTITUIÇÃO: Fatec Cruzeiro.<br>
-									Faculdade de Tecnologia do Estado de São Paulo - Cruzeiro.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/fatec.jpg" alt="" />
-									</span>
-								</div>
-								<div class="col-4">
-									<label>INSTITUIÇÃO: Etec Cruzeiro.<br>
-									Escola Técnica Estadual do Estado de São Paulo - Cruzeiro.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/etec.jpg" alt="" />
-									</span>
-								</div>
+								<h5><span style="color: #625E5D; font-weight:bold;">PROGRAMAÇÃO:</span> Na combinação dessas tecnologias (e outras ferramentas e técnicas) me faço um <span style="font-weight: bold;">bom programador</span>, com capacidade de compreender e corrigir códigos de terceiros, resolver conflitos em produção (sem tempo), planejar / propor / aplicar solução de problemas, comunicar com profissionais de outros setores, trabalhar em equipe, auxiliar colegas em suas dificuldades, ensinar o que sei, atuar em projetos, entre outras. Porém, sempre aberto ao aprendizado de novas formas para evoluir como pessoa e profissional!</b></h5>
 							</div>
 						</div>
 
 						<br>
+						<h1 id="tituloCurso">
+							<i id="iconCursoDown" class="fa fa-caret-down" aria-hidden="true" style="display: none;"></i>
+							<i id="iconCursoRight" class="fa fa-caret-right" aria-hidden="true"></i>
+							<input id="controlCurso" value="fechado" type="hidden">
+							&nbsp; </i>Cursos que realizei:
+						</h1>
+						<div id="areaCurso" style="display: none;">
+							<div class="box alt">
 
-						<h1>Experiência:</h1>
-						<div class="box alt">
-							<div class="row gtr-50 gtr-uniform">
-								<div class="col-4">
-									<label>Duração: {{ tempo }}. (Jun/2022 - em andamento). Posição: PROGRAMADOR PLENO.<br>
-									Mais Top Estética - maior franquia de estética da América.</label>
-									<span class="image fit">
-										<img src="../static/images/imagem1.png" alt="" />
-									</span>
+								<p>Aqui destaco alguns cursos que realizei.</p>
+
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>Internet das Coisas &nbsp; <i class="fas fa-wifi"></i></b>
+											</div>
+											<div class="card-body" id="card_curso1">
+												<h5 class="card-title">Por Alura</h5>
+												<p class="card-text">Conect dispositivos IoT à nuvem AWS.</p>
+												<input type="button" name="" id="curso1" class="button" value="Saber mais">
+											</div>
+											<div  id="curso1_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												No curso desenvolvi um programa em Python que simulava microcontroladores, com ele consegui enviar dados por telemetria para a plataforma AWS IoT Core. Ao receber os dados, fiz o direcionamento deles para o armazenamento DynamoDB e também criei regras de notificação usando AWS SNS para receber alertas por SMS caso algum dado esteja fora do esperado.<br><br>
+												Também aprendi sobre mecanismo de segurança na comunicação telemétrica com a AWS através de certificados.
+												<b>Nesse curso utilizei:</b><br>
+												<ul>
+													<li>AWS IoT Core</li>
+													<li>Dynamo DB - banco NoSQL da AWS</li>
+													<li>AWS SNS (Simple Notofocation Service)</li>
+													<li>Python</li>
+												</ul>
+												No total de aulas o curso teve duração de 8 horas, mais as horas extras que usei para explorar mais e fazer minhas tentativas individuais.<br>
+												<center>
+													<button id="curso1_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+
+									<br>
+
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>C. Nuvem &nbsp; <i class="fas fa-cloud"></i> / Inteligência Artificial &nbsp; <i class="fas fa-brain"></i></b>
+											</div>
+											<div class="card-body" id="card_curso2">
+												<h5 class="card-title">Por FAT e Microsoft</h5>
+												<p class="card-text">Computação em Nuvem e Inteligência Artificial</p>
+												<input type="button" id="curso2" class="button" value="Saber mais">
+											</div>
+											<div  id="curso2_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												O curso apresentou os conceitos e práticas em duas partes: a primeira foi 16 horas de Computação em Nuvem no ambiente Azure, a segunda parte foi 20 horas de Inteligência Artificial também no Azure.<br><br>
+												Ao final do curso fui capaz de descrever as duas áreas, falar de seus fundamentos, e realizar práticas com os recursos da nuvem da Microsoft. Como resultado do meu desempenho, ganhei voucher de 100% para realizar a certificação de nível iniciante em Inteligência Artificial da Microsoft (AI-900).<br><br>
+												Além do conteúdo técnico, o curso teve 4 horas de <i>soft skills</i> onde vi uma das melhores coisas que já aprendi: a escutatória.<br><br>
+												<b>Nesse curso utilizei:</b><br>
+												<ul>
+													<li>Azure</li>
+												</ul>
+												No total foram 40 horas de cursos com conteúdos preparados pela Microsoft e aplicado pela FAT - Fundação de Apoio à Tecnologia, e tive acesso ao curso gratuitamente pela parceria da Microsoft com a Faculdade de Tecnologia do Estado de São Paulo.<br>
+												<center>
+													<button id="curso2_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+
+									<br>
+									
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>Inteligência Artificial &nbsp; <i class="fas fa-brain"></i></b>
+											</div>
+											<div class="card-body" id="card_curso3">
+												<h5 class="card-title">Por Microsoft</h5>
+												<p class="card-text">Certificação de Inteligência Artificial Microsoft AI-900</p>
+												<input type="button" id="curso3" class="button" value="Saber mais">
+											</div>
+											<div  id="curso3_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												A certificação de Inteligência Artificial da Microsoft (AI-900) é um exame que avalia o conhecimento teórico na área e cobre tópicos iniciantes como processamento de linguagem natural, visão computacional e aprendizagem de máquina. Embora não tenha avaliação prática, a prova possui questões que só podem ser respondidas por quem realmente teve contato com as ferramentas do Azure.<br><br>
+												O exame teve duração de 1 hora, com 50 questões, todas em Inglês. A realização dela foi monitorada por um instrutor que assistia o compartilhamento da minha tela enquanto eu respondia.<br><br>
+												Ao final fui aprovado e recebi a certificação!
+												<center>
+													<button id="curso3_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+
+									<br>
+
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>Segurança da Informação &nbsp; <i class="fas fa-user-secret"></i></b>
+											</div>
+											<div class="card-body" id="card_curso4">
+												<h5 class="card-title">Por FAT e CISCO</h5>
+												<p class="card-text">Introdução à Cibersegurança</p>
+												<input type="button" id="curso4" name="" class="button" value="Saber mais">
+											</div>
+											<div  id="curso4_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												Foi abordado os principais tipos de ataques cibernéticos, os diferentes tipos de malware e como cada um deles age, as ferramentas usadas na área de segurança para detectar e responder à incidentes, tudo de forma introdutória.<br><br>
+												O curso foi totalmente teórico e deu noções mais robustas sobre o que é Cibersegurança e mudança de hábitos digitais visando a proteção dos dados.<br>
+												<center>
+													<button id="curso4_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+								
+									<br>
+									
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>Segurança da Informação &nbsp; <i class="fas fa-user-secret"></i></b>
+											</div>
+											<div class="card-body" id="card_curso5">
+												<h5 class="card-title">Por FAT e CISCO</h5>
+												<p class="card-text">CyberOps Associate</p>
+												<input type="button" id="curso5" name="" class="button" value="Saber mais">
+											</div>
+											<div  id="curso5_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												Apesar do conteúdo teórico, o curso deu ênfase na prática dos laboratórios: ambientes virtuais para análises de segurança, ferramenta de monitoramento de rede, investigação de vulnerabilidades de endpoints, modelos de resposta à incidentes, classificar os tipos de ataques, análise dos protocolos de rede, criptografia e backup, entre outros.<br><br>
+												<b>Nesse curso utilizei:</b><br>
+												<ul>
+													<li>Security Onion (SO)</li>
+													<li>Kibana</li>
+													<li>Sguil</li>
+													<li>NetworkMiner</li>
+													<li>Etc</li>
+												</ul>
+												O curso foi ministrado através de aulas semanais, os laboratórios práticos também eram entregues a cada semana. Ao todo foram 88 horas: 80 horas de conteúdo técnico e 8 horas de <i>soft skills</i>.<br><br>
+												Todo o conteúdo foi desenvolvido pela CISCO e aplicado pela FAT - Fundação de Apoio à Tecnologia em parceria com a Faculdade de Tecnologia do Estado de São Paulo.<br>
+												<center>
+													<button id="curso5_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+
+									<br>
+									
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>Engenharia de Software &nbsp; <i class="fas fa-file-code"></i></b>
+											</div>
+											<div class="card-body" id="card_curso6">
+												<h5 class="card-title">Por CertProf</h5>
+												<p class="card-text">Scrum Foundation Professional Certificate</p>
+												<input type="button" id="curso6" name="" class="button" value="Saber mais">
+											</div>
+											<div  id="curso6_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												Nesse curso aprendi com mais detalhes sobre o Scrum: o que é, recursos, como aplicar. Para cada tópico foi apresentado explicações e exemplos de uso.<br><br>
+												Os tópicos abordados foram: o papel das pessoas dentro do Scrum; definição, planejamento e revisão da sprint; backlog da sprint e do produto; incrementos; reunião dirária.<br>
+												<center>
+													<button id="curso6_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+
+									<br>
+									
+									<div class="col-12">
+										<div class="card text-center">
+											<div class="card-header" style="background-color: #ADD8E6;">
+												<b>API &nbsp; <i class="fas fa-code"></i></b>
+											</div>
+											<div class="card-body" id="card_curso7">
+												<h5 class="card-title">Por Digital Innovation One</h5>
+												<p class="card-text">Desenvolvimento Avançado de API com Flask</p>
+												<input type="button" id="curso7" name="" class="button" value="Saber mais">
+											</div>
+											<div  id="curso7_desc" class="card-footer text-muted" style="display: none; text-align: justify;">
+												A simplicidade do Flask permitiu compreender os conceitos REST e as questões mais avançadas sobre API de uma forma bem clara. O curso abordou desenvolvimento eficiente de APIs usando Flask-RESTful e Postman, com persistência em banco de dados e autenticação.<br><br>
+												O conteúdo foi bem enxuto e focado na explicação do desenvolvimento das APIs e explicação de principais erros.<br>
+												<center>
+													<button id="curso7_fechar" type="button" class="small button">Fechar</button>
+												</center>
+											</div>
+										</div>
+									</div>
+
+								<br>
+							</div>
+						</div>
+
+
+						<br>
+
+						<h1 id="tituloFormacao">
+							<i id="iconFormacaoDown" class="fa fa-caret-down" aria-hidden="true" style="display: none;"></i>
+							<i id="iconFormacaoRight" class="fa fa-caret-right" aria-hidden="true"></i>
+							<input id="controlFormacao" value="fechado" type="hidden">
+							&nbsp; </i>Formação acadêmica:
+						</h1>
+						<div id="areaFormacao" style="display: none;">
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4">
+										<label>INSTITUIÇÃO: Fatec Cruzeiro.<br>
+										Faculdade de Tecnologia do Estado de São Paulo - Cruzeiro.</label>
+										<span class="image fit">
+												<img src="../static/images/cursos/fatec.jpg" alt="" />
+										</span>
+									</div>
+									<div class="col-4">
+										<label>INSTITUIÇÃO: Etec Cruzeiro.<br>
+										Escola Técnica Estadual do Estado de São Paulo - Cruzeiro.</label>
+										<span class="image fit">
+												<img src="../static/images/cursos/etec.jpg" alt="" />
+										</span>
+									</div>
 								</div>
-								<div class="col-4">
-									<label>Duração: 6 meses. (Dez/2021 - Mai/2022). Posição: PROGRAMADOR JÚNIOR.<br>
-									Mais Top Estética - maior franquia de estética da América.</label>
-									<span class="image fit">
-										<img src="../static/images/imagem1.png" alt="" />
-									</span>
-								</div>
-								<div class="col-4">
-									<label>Duração: 1 ano (Set/2020 - Set/2021). Posição: BOLSISTA.<br>
-									Conselho Nacional de Desenvolvimento Científico e Tecnológico.</label>
-									<span class="image fit">
-											<img src="../static/images/cursos/cnpq.jpg" alt="" />
-									</span>
+							</div>
+						</div>
+
+						<br>
+
+						<h1 id="tituloExperiencia">
+							<i id="iconExperienciaDown" class="fa fa-caret-down" aria-hidden="true" style="display: none;"></i>
+							<i id="iconExperienciaRight" class="fa fa-caret-right" aria-hidden="true"></i>
+							<input id="controlExperiencia" value="fechado" type="hidden">
+							&nbsp; </i>Experiência:
+						</h1>
+						<div id="areaExperiencia" style="display: none;">
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4">
+										<label>Duração: {{ tempo }}. (Jun/2022 - em andamento). Posição: PROGRAMADOR PLENO.<br>
+										Mais Top Estética - maior franquia de estética da América.</label>
+										<span class="image fit">
+											<img src="../static/images/imagem1.png" alt="" />
+										</span>
+									</div>
+									<div class="col-4">
+										<label>Duração: 6 meses. (Dez/2021 - Mai/2022). Posição: PROGRAMADOR JÚNIOR.<br>
+										Mais Top Estética - maior franquia de estética da América.</label>
+										<span class="image fit">
+											<img src="../static/images/imagem1.png" alt="" />
+										</span>
+									</div>
+									<div class="col-4">
+										<label>Duração: 1 ano (Set/2020 - Set/2021). Posição: BOLSISTA.<br>
+										Conselho Nacional de Desenvolvimento Científico e Tecnológico.</label>
+										<span class="image fit">
+												<img src="../static/images/cursos/cnpq.jpg" alt="" />
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -350,6 +379,7 @@
 		<!-- Scripts -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 			<script src="{{ url_for('static', filename='assets/js/cursos.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
 			<!-- <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
