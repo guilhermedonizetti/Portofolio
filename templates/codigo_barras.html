@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Guilherme - Código de Barras</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Software de apoio à visualização de dados que conecta à qualquer banco de dados MySQL e permite selecionar as colunas para formar gráficos" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="shortcut icon" href="../static/images/site_icon.png">
+	</head>
+
+	<style>
+		#header {
+			background-image: url("images/overlay.png"), url("../static/images/{{ nome_banner }}.jpg");
+		}
+	</style>
+	
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h3>
+								<b><a href="/">Página Inicial</a> <i class="fas fa-angle-right"></i> </b>
+								Leitor de Código de Barras
+							</h3>
+						</header>
+						<p>O programa tem o objetivo de capturar a imagem de um código de barras e identificar o valor ($) associado ao código.<br>
+						<br>Desenvolvi uma interface onde o usuário pode optar por abrir a câmera ou não. Ao iniciar a câmera, o usuário pode registrar uma imagem do código de barras clicando em um botão. Quando fizer a captura da imagem, o programa faz o processamento do código e então destaca o valor dele.<br>
+						<br>Além de preço, muitas outras informações poderiam ser associadas ao código para que, no processo de venda, todas as informações do produto fossem identificadas com mais facilidade.<br>
+						<br>O padrão de código de barras usado foi EAN13. Programei a geração de várias imagens com código de barras para testar o funcionamento do programa, em que na maioria dos casos a identificação foi bem sucedida, exceto em locais muito claros onde o contraste das cores preto e branco são menores.<br><br>
+
+						<b>Tecnologias usadas: </b>Python, Streamlit, OpenCV, Pyzbar, Barcode e webcam.</p>
+
+						<a href="https://github.com/guilhermedonizetti/Leitor_Codigo_Barras" target="_blank">código</a>
+						<br><br>
+
+					</section>
+
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="https://github.com/guilhermedonizetti/Leitor_Codigo_Barras/blob/master/images/codigo_barras.png?raw=true" alt="" /></span></div>
+								</div>
+							</div>
+
+			</div>
+
+	</body>
+
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
+</html>

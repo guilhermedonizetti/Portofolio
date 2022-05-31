@@ -1,3 +1,14 @@
+window.$crisp=[];
+    window.CRISP_WEBSITE_ID="b9c20f8e-079b-4535-9448-0b8e5dcf4a20";
+	(function(){
+		d=document;
+		s=d.createElement("script");
+		s.src="https://client.crisp.chat/l.js";
+		s.async=1;
+		d.getElementsByTagName("head")[0].appendChild(s);
+	})
+();
+
 $("#tituloTecnologia").on("click", function(){
 
     var status = $("#controlTecnologia").val();
