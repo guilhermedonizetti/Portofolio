@@ -96,3 +96,25 @@ $("#tituloExperiencia").on("click", function(){
         $("#areaExperiencia").toggle(500);
     }
 });
+
+$("#tituloIdiomas").on("click", function(){
+
+    var status = $("#controlIdiomas").val();
+
+    if (status == "fechado") {
+        $("#controlIdiomas").val("aberto");
+    
+        $("#iconIdiomasRight").css('display', 'none');
+        $("#iconIdiomasDown").css('display', 'inline');
+
+        $("#areaIdiomas").show(500);
+    }
+    else {
+        $("#controlIdiomas").val("fechado");
+    
+        $("#iconIdiomasRight").css('display', 'inline');
+        $("#iconIdiomasDown").css('display', 'none');
+
+        $("#areaIdiomas").toggle(500);
+    }
+});
