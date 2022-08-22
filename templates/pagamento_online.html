@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Guilherme - Pagamento Online</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Software de apoio à visualização de dados que conecta à qualquer banco de dados MySQL e permite selecionar as colunas para formar gráficos" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="shortcut icon" href="../static/images/site_icon.png">
+	</head>
+
+	<style>
+		#header {
+			background-image: url("images/overlay.png"), url("../static/images/{{ nome_banner }}.jpg");
+		}
+	</style>
+	
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h3>
+								<b><a href="/">Página Inicial</a> <i class="fas fa-angle-right"></i> </b>
+								Pagamento Online
+							</h3>
+						</header>
+						<p>Trata-se de uma integração com uma conta Mercado Pago através da API Checkout Transparente. A API é disponibilizada pelo próprio banco para que desenvolvedores programem seu prórpio checkout online.<br>
+						<br>Programei para que no processo de venda, já fosse gerado um link de cobrança para ser enviado ao cliente. Na página de cobrança, alguns dados já são trazidos do banco de dados, como documento, nome e e-mail. A interface também exibe a descrição da compra e o valor. Após abrir o link de cobrança, o cliente pode pagar por QRCode ou código, em casos de pagamento por PIX. Se o pagamento for por boleto, um PDF é gerado na hora e também enviado no e-mail informado. Para pagamentos em Cartão, Débito ou Crédito, o cliente deve inserir seus dados de cartão e efetuar o pagamento.<br></p>
+
+						<center>
+							<figure>
+								<img src="https://http2.mlstatic.com/storage/dx-devsite/docs-assets/images/api/api-integration-flowchart-cardform-pt.png?v=4.1.5-rc-5" alt="Diagrama de Sequência - Pagamento por Cartão" width="90%">
+								<figcaption>Diagrama de Sequência - Pagamento por Cartão. Fonte: Mercado Pago</figcaption>
+							</figure>
+						</center>
+
+						<p><br>O cliente conta com uma interface amigável que apresenta o status do pagamento, se aprovado, rejeitado ou em processamento. E esse foi um dos motivos principais em selecionar a ferramenta Transparente do Mercado Pago, pois a ideia é que a ferramenta seja "transparente", isto é, não interferir no que o usuário está enxergando, permitindo manter os padrões visuais do sistema da empresa em todas as etapas do pagamento, sem dar a sensação de que está usando um sistema de terceiro.<br>
+						<br>O recurso que desenvolvi também inclui o controle das credenciais da conta de cada unidade da empresa. Para trazer os dados sensíveis, tais como tokens e IDs das contas, apliquei um nível maior de segurança ao armazená-los e comunicá-los. No formulário de cobrança também foi aplicado controle de acesso aos dados e criptografia. Além da própria segurança oferecida pelo SDK do Mercado Pago, o recurso em geral atendeu aos requisitos de configuração e segurança para operar em Produção e com isso apresenta alto índice de aprovação dos pagamentos.<br>
+
+						<br>O recurso em geral conta com:</p>
+							<li>Geração de links de cobrança</li>
+							<li>Página para controle de credenciais</li>
+							<li>Página de cobrança a ser enviada para o cliente</li>
+							<li>Integração segura com a conta do Mercado Pago</li>
+						
+						<p><br>O Pagamento Online é um recurso desenvolvido para o sistema de gestão da empresa <a href="https://www.autoestimamaistop.com/" target="_blank">Mais Top Estética</a>, por esse motivo não apresento a interface nem os detalhes da programação em geral.<br><br><br>
+
+						<b>Tecnologias usadas: </b>PHP, JavaScript, SQL, Postman, API Checkout Transparente e conta no Mercado Pago.</p>
+
+					</section>
+
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="../static/images/pagamento_online.jpg" width="60%" alt="Pagamento Online" /></span></div>
+								</div>
+							</div>
+
+			</div>
+
+	</body>
+
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
+</html>
