@@ -39,8 +39,8 @@
 								Notas Fiscais
 							</h3>
 						</header>
-						<p>Trata-se de uma integração com uma conta Mercado Pago através da API Checkout Transparente. A API é disponibilizada pelo próprio banco para que desenvolvedores programem seu prórpio checkout online.<br>
-						<br>Programei para que no processo de venda, já fosse gerado um link de cobrança para ser enviado ao cliente. Na página de cobrança, alguns dados já são trazidos do banco de dados, como documento, nome e e-mail. A interface também exibe a descrição da compra e o valor. Após abrir o link de cobrança, o cliente pode pagar por QRCode ou código, em casos de pagamento por PIX. Se o pagamento for por boleto, um PDF é gerado na hora e também enviado no e-mail informado. Para pagamentos em Cartão, Débito ou Crédito, o cliente deve inserir seus dados de cartão e efetuar o pagamento.<br></p>
+						<p>Desenvolvi o recurso para emitir automaticamente as Notas Fiscais de cada venda cadastrada no sistema de gestão da <a href="https://www.autoestimamaistop.com/">Mais Top Estética</a><br>
+						<br>Durante o processo de venda, o recurso já separa os dados da transação que serão usados na emissão da Nota. Os dados coletados são referentes à unidade (prestador), ao serviço/produto e ao cliente (tomador). Em seguida, um algoritmo identifica no banco de dados as Notas que devem ser emitidas e executa a emissão automaticamente, em <i>cron job</i>.<br></p>
 
 						<center>
 							<figure>
@@ -49,25 +49,27 @@
 							</figure>
 						</center>
 
-						<p><br>O cliente conta com uma interface amigável que apresenta o status do pagamento, se aprovado, rejeitado ou em processamento. E esse foi um dos motivos principais em selecionar a ferramenta Transparente do Mercado Pago, pois a ideia é que a ferramenta seja "transparente", isto é, não interferir no que o usuário está enxergando, permitindo manter os padrões visuais do sistema da empresa em todas as etapas do pagamento, sem dar a sensação de que está usando um sistema de terceiro.<br>
-						<br>O recurso que desenvolvi também inclui o controle das credenciais da conta de cada unidade da empresa. Para trazer os dados sensíveis, tais como tokens e IDs das contas, apliquei um nível maior de segurança ao armazená-los e comunicá-los. No formulário de cobrança também foi aplicado controle de acesso aos dados e criptografia. Além da própria segurança oferecida pelo SDK do Mercado Pago, o recurso em geral atendeu aos requisitos de configuração e segurança para operar em Produção e com isso apresenta alto índice de aprovação dos pagamentos.<br>
+						<p><br>O algoritmo desenvolvido verifica se o prestador e o tomador da Nota possuem todos os dados necessários para executar a emissão. Após isso, cria o JSon e envia os dados para a SEFAZ do estado em que a venda acontece (NFC-e), ou para a prefeitura do município (NFS-e).<br>
+						<br>Se a SEFAZ/Prefeitura aprovar ou rejeitar a emissão, o sistema será atualizado por <i>webhook</i>. Com isso, desenvolvi um algoritmo capaz de lidar com os diferentes retornos possíveis (aprovado, rejeitado, processando, cancelado, etc.), e executar tarefas como registro de logs, atualização do status da emissão, entre outros. Após a aprovação da Nota Fiscal, o PDF e o XML são disponibilizados automaticamente numa página de controle das Notas.<br>
+						<br>As unidades podem gerenciar os dados fiscais, como por exemplo: alíquota, regime tributário, código de serviço, razão social, entre outros.<br>
 
-						<br>O recurso em geral conta com:</p>
-							<li>Geração de links de cobrança</li>
-							<li>Página para controle de credenciais</li>
-							<li>Página de cobrança a ser enviada para o cliente</li>
-							<li>Integração segura com a conta do Mercado Pago</li>
+						<blockquote>
+							<b>Obs.: Emitir Notas Fiscais é uma obrigação tributária de qualquer empresa que comercializa serviços e/ou produtos. Quem sonega, comete um crime. Assim, o recurso de emissão de NFS-e/NFC-e automático, além de ser mais prático e facilitado para a empresa, ajuda a mesma a se manter regularizada, se mostrando como um recurso de grande valor para sistemas de gestão e comercial.</b>
+						</blockquote>
 						
-						<p><br>O Pagamento Online é um recurso desenvolvido para o sistema de gestão da empresa <a href="https://www.autoestimamaistop.com/" target="_blank">Mais Top Estética</a>, por esse motivo não apresento a interface nem os detalhes da programação em geral.<br><br><br>
+						<p><br>O maior desafio para desenvolver foi compreender a questão fiscal relacionado à emissão de Notas, assunto da área de Contabilidade. Através de muita conversa com Contadores por telefone e e-mail, programei e revisei a eficiência do recurso. Atualmente, as unidades de diferentes estado do país emitem a NF por essa programação. Desde que o recurso entrou em Produção, todas as rejeições estão relacionadas apenas à irregularidades do prestador ou do tomador (CPF inválido, certificado digital vencido, entre outros), e não ao sistema.<br>
+						<br>Essa programação foi dessenvolvida para a empresa mencionada no começo, com isso não apresento mais detalhes ou imagens do resultado.<br><br><br>
 
-						<b>Tecnologias usadas: </b>PHP, JavaScript, SQL, Postman, API Checkout Transparente e conta no Mercado Pago.</p>
+						<b>Tecnologias usadas: </b>PHP, SQL, Postman, RESTful API.</p>
 
 					</section>
 
 							<div class="box alt">
 								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="../static/images/pagamento_online.jpg" width="60%" alt="Pagamento Online" /></span></div>
+									<div class="col-12"><span class="image fit"><img src="../static/images/nota_fiscal.avif" alt="" /></span></div>
+									<div class="col-12"><span class="image fit"><img src="../static/images/nota_fiscal_servico.avif" alt="" /></span></div>
 								</div>
+								<p>As imagens acima são de Notas sem valor fiscal com dados de simulação.</p>
 							</div>
 
 			</div>
