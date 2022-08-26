@@ -39,13 +39,13 @@
 								Notas Fiscais
 							</h3>
 						</header>
-						<p>Desenvolvi o recurso para emitir automaticamente as Notas Fiscais de cada venda cadastrada no sistema de gestão da <a href="https://www.autoestimamaistop.com/">Mais Top Estética</a><br>
+						<p>Desenvolvi o recurso para emitir automaticamente as Notas Fiscais de cada venda cadastrada no sistema de gestão da <a href="https://www.autoestimamaistop.com/" target="_blank">Mais Top Estética</a><br>
 						<br>Durante o processo de venda, o recurso já separa os dados da transação que serão usados na emissão da Nota. Os dados coletados são referentes à unidade (prestador), ao serviço/produto e ao cliente (tomador). Em seguida, um algoritmo identifica no banco de dados as Notas que devem ser emitidas e executa a emissão automaticamente, em <i>cron job</i>.<br></p>
 
 						<center>
 							<figure>
-								<img src="https://http2.mlstatic.com/storage/dx-devsite/docs-assets/images/api/api-integration-flowchart-cardform-pt.png?v=4.1.5-rc-5" alt="Diagrama de Sequência - Pagamento por Cartão" width="90%">
-								<figcaption>Diagrama de Sequência - Pagamento por Cartão. Fonte: Mercado Pago</figcaption>
+								<img src="https://raw.githubusercontent.com/guilhermedonizetti/Portofolio/master/static/images/diagrama_nota_fiscal.avif" alt="Diagrama Nota Fiscal" width="90%">
+								<figcaption>Diagrama do Fluxo da Nota Fiscal.</figcaption>
 							</figure>
 						</center>
 
@@ -57,7 +57,7 @@
 							<b>Obs.: Emitir Notas Fiscais é uma obrigação tributária de qualquer empresa que comercializa serviços e/ou produtos. Quem sonega, comete um crime. Assim, o recurso de emissão de NFS-e/NFC-e automático, além de ser mais prático e facilitado para a empresa, ajuda a mesma a se manter regularizada, se mostrando como um recurso de grande valor para sistemas de gestão e comercial.</b>
 						</blockquote>
 						
-						<p><br>O maior desafio para desenvolver foi compreender a questão fiscal relacionado à emissão de Notas, assunto da área de Contabilidade. Através de muita conversa com Contadores por telefone e e-mail, programei e revisei a eficiência do recurso. Atualmente, as unidades de diferentes estado do país emitem a NF por essa programação. Desde que o recurso entrou em Produção, todas as rejeições estão relacionadas apenas à irregularidades do prestador ou do tomador (CPF inválido, certificado digital vencido, entre outros), e não ao sistema.<br>
+						<p><br>O maior desafio para desenvolver foi compreender a questão fiscal relacionado à emissão de Notas, assunto da área de Contabilidade. Através de conversas com Contadores por telefone e e-mail, consegui aprender e programei e revisei a eficiência do recurso. Atualmente, as unidades de diferentes estados do país emitem a NF por essa programação. Desde que o recurso entrou em Produção, todas as rejeições estão relacionadas apenas à irregularidades do prestador ou do tomador (CPF inválido, certificado digital vencido, entre outros), e não ao sistema.<br>
 						<br>Essa programação foi dessenvolvida para a empresa mencionada no começo, com isso não apresento mais detalhes ou imagens do resultado.<br><br><br>
 
 						<b>Tecnologias usadas: </b>PHP, SQL, Postman, RESTful API.</p>
